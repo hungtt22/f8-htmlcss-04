@@ -7,15 +7,80 @@ html {
 :root {
     --font-primary: "Poppins", sans-serif;
     --font-second: "Sora", sans-serif;
+    --bg-primary: #000958;
+    --bg-second: #ff5b2e;
 }
 body {
     font-size: 1.6rem;
     font-family: var(--font-primary);
 }
+/* Common */
 input,
 select,
 textarea,
 button {
     font-size: inherit;
     font-family: inherit;
+}
+.container {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+}
+.btn {
+    --height: 56px;
+    display: inline-block;
+    padding: 0 16px;
+    min-width: 246px;
+    height: var(--height);
+    line-height: var(--height);
+    color: var(--bg-second);
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+    border: 1px solid var(--bg-second);
+    border-radius: 999px;
+}
+/*========== Header ==========*/
+.header {
+    padding: 26px 0;
+}
+.header-inner {
+    display: flex;
+    align-items: center;
+}
+.header__nav {
+    margin-left: 211px;
+}
+.nav__list {
+    display: flex;
+    align-items: center;
+}
+.nav__link,
+.header__action__sign-in {
+    padding: 10px 18px;
+    color: #5e6085;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1;
+}
+.nav__link.active,
+.nav__link:hover {
+    color: var(--bg-primary);
+    font-size: 1.4rem;
+    text-shadow: 1px 0 0 currentColor;
+}
+.header__action {
+    margin-left: auto;
+}
+.header__action__sign-up {
+    --height: 50px;
+    min-width: 117px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border-color: rgba(0, 9, 88, 0.7);
+    color: var(--bg-primary);
 }
