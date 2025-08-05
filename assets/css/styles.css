@@ -416,7 +416,7 @@ a {
 }
 .tab__list {
     position: relative;
-    display: flex;
+    display: inline-flex;
     column-gap: 56px;
     align-items: center;
 }
@@ -447,7 +447,7 @@ a {
     background: #ff5b2e;
 }
 .tab__item__icon {
-    width: 20px;
+    width: 30px;
 }
 .tab__content-item {
     display: none;
