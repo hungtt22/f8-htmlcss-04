@@ -680,3 +680,137 @@ a {
 .staff__btn {
     min-width: 193px;
 }
+
+/* ========== Pricing ========== */
+.pricing {
+    padding: 86px 0;
+    background: #fff6ed;
+}
+.pricing__container {
+    width: 994px;
+}
+.pricing__heading,
+.pricing__desc {
+    text-align: center;
+}
+.pricing__desc {
+    width: 709px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.pricing__switch-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 38px;
+}
+.pricing__switch {
+    position: relative;
+}
+.pricing__switch::before {
+    position: absolute;
+    top: -10px;
+    right: -112px;
+    content: url(../icon/pricing-decor-01.svg);
+}
+.pricing__switch-label {
+    position: relative;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 276px;
+    height: 56px;
+    border-radius: 31px;
+    border: 1px solid rgb(255 91 46 / 60%);
+    user-select: none;
+    cursor: pointer;
+}
+.pricing__switch-label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 140px;
+    height: 100%;
+    border-radius: inherit;
+    background: #ff5b2e;
+}
+.pricing__switch-input:checked + .pricing__switch-label::before {
+    width: 131px;
+    left: initial;
+    right: 0;
+}
+.pricing__switch-input:not(:checked)
+    + .pricing__switch-label
+    .pricing__switch-value:nth-child(2),
+.pricing__switch-input:checked
+    + .pricing__switch-label
+    .pricing__switch-value:nth-child(1) {
+    color: #ff5b2e;
+}
+.pricing__switch-value {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+}
+.pricing__list {
+    margin-top: 56px;
+    display: flex;
+    column-gap: 44px;
+}
+.pricing-item {
+    padding: 30px 28px;
+    flex-grow: 1;
+    border-radius: 20px;
+    background: #fff;
+}
+.pricing-item__type {
+    color: #ff5b2e;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+.pricing-item__title {
+    margin-top: 8px;
+    color: #3f4065;
+    font-family: var(--font-second);
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1;
+}
+.pricing-item__price {
+    margin-top: 24px;
+    color: #000958;
+    font-family: var(--font-second);
+    font-size: 3.3rem;
+    font-weight: 700;
+    line-height: 1.03;
+}
+.pricing-item__btn {
+    --height: 44px;
+    margin-top: 22px;
+    background: transparent;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 500ms, color;
+}
+.pricing-item__btn:hover {
+    background-color: var(--bg-second);
+    color: #fff;
+}
+.pricing-item__list {
+    margin-top: 24px;
+}
+.pricing-item__item {
+    display: flex;
+    column-gap: 12px;
+    margin-top: 18px;
+    color: #656689;
+    font-size: 1.4rem;
+    line-height: 1;
+}
+.pricing-item__item::before {
+    content: url(../icon/price-check.svg);
+}
